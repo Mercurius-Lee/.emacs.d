@@ -17,3 +17,4 @@ when I opend the init.el, I found that she added some code below is the details:
 #+END_SRC
 so she use the mailclient-send-it to push the mail as default, so I just comment it,and add the code below so as to start the mail to send for me:
 '(send-mail-function (quote smtpmail-send-it)))
+add some words to test "pull"
