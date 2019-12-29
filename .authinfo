@@ -1,2 +1,0 @@
-machine imap.gmail.com login everest.mauna@gmail.com password sdmcfxssfbvkmpvh port imaps
-machine smtp.gmail.com login everest.mauna@gmail.com password sdmcfxssfbvkmpvh port 587

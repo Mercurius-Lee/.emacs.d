@@ -1,2 +1,0 @@
-machine imap.gmail.com login nghiadai9209@gmail.com password sdmcfxssfbvkmpvh port imaps
-machine smtp.gmail.com login nghiadai9200@gmail.com password sdmcfxssfbvkmpvh port 587
