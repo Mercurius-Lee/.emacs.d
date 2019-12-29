@@ -1,0 +1,19 @@
+1.系统拼音的快捷键: C+\,input chinese-py
+2.使用Gnus GMAIL: [[https://www.emacswiki.org/emacs/GnusGmail][Emacs Wiki]],(C-c L,插入网络链接),when I made the configture as the Wiki said, she can receive my gmail,but she can't send the gmail,it puzzles me a lot, why?
+when I opend the init.el, I found that she added some code below is the details:
+#+BEGIN_SRC 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+'(send-mail-function (quote mailclient-send-it)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+#+END_SRC
+so she use the mailclient-send-it to push the mail as default, so I just comment it,and add the code below so as to start the mail to send for me:
+'(send-mail-function (quote smtpmail-send-it)))
