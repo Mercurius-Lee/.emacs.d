@@ -1,3 +1,15 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(setq url-proxy-services
+      '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+	("http" . "127.0.0.1:7890")
+	("https" . "127.0.0.1:7890")))
+
 (setq user-mail-address "everest.mauna@gmail.com"
       user-full-name "Ever.maunt")
 
@@ -23,3 +35,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(require 'w3m-load)
+(require 'mime-w3m)
