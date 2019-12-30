@@ -26,3 +26,30 @@ https://www.emacswiki.org/emacs/InstallingPackages
          ("http" . "proxy.com:8080")
          ("https" . "proxy.com:8080")))
          需要将proxy.com:8080替代
+         
+安装emacs-w3m之前，已经安装了emacs-w3m-snapshot，不知道对否？
+1.$sudo aptitude install w3m.安装完成后 w3m https://www.google.com检查是否连接成功，连接成功也就是安装成功。
+2.cd
+3.$git clone  https://github.com/emacs-w3m/emacs-w3m.git
+4.cd emacs-w3m
+5.$sudo aptitude install autoconf
+6.$./configure
+7.$make
+8.$sudo make install
+以上参照：https://blog.csdn.net/smilecrab/article/details/84132626
+9.$sudo make install-coins
+参照：https://github.com/emacs-w3m/emacs-w3m
+10.命令行输入emacs进入25.2.2版本，本身安装的是26.3版本，感到奇怪？
+11.配置init.el,参照官方的github
+（requir 'w3m-load)
+(requir 'mime-w3m)
+12.$emacs, M-x gnus打开邮件网址自动链接到了firefox，看来配置内需要设置w3m其为默认浏览器
+13.代码如下
+;;设置w3m主页
+(setq w3m-home-page "https://www.google.com)
+(setq w3m-default-display-inline-images t)
+(setq w3m-default-toggle-inline-images t)
+(setq w3m-use-cookies t)
+(setq w3m-command-arguments '("-cookie" "-F"))
+(setq browse-url-browser-function 'w3m-browse-url)
+(setq w3m-view-this-url-new-session-in-background t)
